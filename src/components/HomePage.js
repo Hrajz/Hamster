@@ -19,7 +19,7 @@ function HomePage() {
     <div className="bg-[#13111c] text-white min-h-screen">
       <Navbar />
       <section className="text-center py-2 px-4 flex flex-col items-center">
-        <h1 className="text-[80px] font-bold mb-4 max-[800px]:text-[48px] max-[800px]:mt-[55px]">
+        <h1 className="text-[80px] font-bold mb-4 max-[800px]:text-[48px] max-[800px]:mt-[115px] max-[900px]:leading-tight">
           Unleash your inner CEO
         </h1>
         <img src={image} alt="image" />
@@ -31,7 +31,11 @@ function HomePage() {
           Buy upgrades, complete quests, invite friends and become the best
         </p>
         <button id="btn" className="" onClick={handlePlayClick}>
-          <img src={image2} alt="" className="w-[620px] hover:brightness-110" />
+          <img
+            src={image2}
+            alt=""
+            className="w-[620px] hover:brightness-110 max-[800px]:w-[150vw] overflowx-x-hidden"
+          />
         </button>
       </section>
 

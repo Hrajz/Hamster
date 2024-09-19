@@ -18,7 +18,7 @@ const Navbar = () => {
           </span>
         </div>
       </nav>
-      <div className="absolute top-[50px] left-[20px] flex justify-center rounded-full border border-gray-800 w-fit py-2 mb-6 items-center max-[900px]:top-[87px]">
+      <div className="absolute top-[50px] left-[20px] flex justify-center rounded-full border border-gray-800 w-fit py-2 mb-6 items-center max-[900px]:top-[95px] max-[900px]:py-0 max-[900px]:pl-1">
         <a href="#" className="text-gray-400 hover:text-white">
           <FaSquareXTwitter className="size-[45px] max-[800px]:size-[30px]" />
         </a>
