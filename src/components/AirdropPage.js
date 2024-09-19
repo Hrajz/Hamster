@@ -1,0 +1,193 @@
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import image from "../11.png"; // Replace this with your actual image
+
+const AirdropPage = () => {
+  const navigate = useNavigate();
+  const listingDate = new Date("2024-10-26T00:00:00Z"); // Listing Date
+
+  const [timeLeft, setTimeLeft] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+  });
+
+  // Function to calculate time difference between now and the listing date
+  const calculateTimeLeft = () => {
+    const now = new Date();
+    const difference = listingDate - now;
+
+    if (difference > 0) {
+      const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((difference / 1000 / 60) % 60);
+      const seconds = Math.floor((difference / 1000) % 60);
+
+      setTimeLeft({ days, hours, minutes, seconds });
+    } else {
+      setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+    }
+  };
+
+  useEffect(() => {
+    const timer = setInterval(calculateTimeLeft, 1000);
+    return () => clearInterval(timer);
+  }, []);
+
+  const handlePlayClick = () => {
+    navigate("/"); // Navigate to home page
+  };
+
+  // Format the countdown as a string
+  const formattedTimeLeft = `${timeLeft.days} DAYS ${timeLeft.hours
+    .toString()
+    .padStart(2, "0")}:${timeLeft.minutes
+    .toString()
+    .padStart(2, "0")}:${timeLeft.seconds.toString().padStart(2, "0")}`;
+
+  // Format the listing date dynamically
+  const formattedListingDate = listingDate.toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+
+  return (
+    <div className="min-h-screen bg-black text-white p-4">
+      {/* Header */}
+      <div className="flex items-center justify-between pb-4">
+        <div className="flex items-center space-x-2">
+          <button onClick={handlePlayClick} className="text-lg">
+            &#8592;
+          </button>
+          <h1 className="text-xl font-semibold">Hamster Kombat</h1>
+          <span className="text-blue-500 text-sm ml-2">&#10003;</span>
+        </div>
+      </div>
+
+      {/* Countdown and Coin */}
+      <div className="text-center py-4">
+        <div className="relative inline-block">
+          <div
+            className="rounded-full w-42 h-42 mx-auto border-[3px] border-yellow-500 animate-spin-slow"
+            style={{
+              animationDuration: `${60 - timeLeft.seconds}s`,
+            }}
+          >
+            <img
+              src={image}
+              alt="Hamster Coin"
+              className="w-42 h-42 mx-auto rounded-full"
+            />
+          </div>
+          <div className="absolute bottom-[-7px] left-1/2 transform -translate-x-1/2 bg-yellow-500 rounded-full px-2 py-1 text-black text-xs">
+            {formattedTimeLeft}
+          </div>
+        </div>
+        <h2 className="text-3xl font-bold mt-4">AirDrop</h2>
+        <p className="text-sm text-gray-500">Listing date</p>
+        <p className="text-2xl font-semibold text-yellow-400">
+          {formattedListingDate}
+        </p>
+        <div className="bg-green-500 text-center rounded-md mt-4 p-2">
+          <p className="text-white">AirDrop allocation points</p>
+          <p className="text-xl font-bold">TBA</p>
+        </div>
+      </div>
+
+      {/* Points and Withdrawal */}
+      <div className="mt-6">
+        <div className="flex justify-between p-2 bg-gray-700 rounded-md text-gray-400">
+          <p>Points</p>
+          <p>Withdrawal</p>
+        </div>
+
+        {/* Exchanges */}
+        <div className="mt-4 space-y-2">
+          {/* Exchange Items */}
+          <div className="flex justify-between p-4 bg-gray-800 rounded-xl">
+            <div className="flex items-center space-x-4">
+              <img
+                src="/path-to-binance-logo"
+                alt="Binance"
+                className="w-6 h-6"
+              />
+              <p className="max-[500px]:text-sm">Binance exchange</p>
+            </div>
+            <button className="text-green-500 bg-gray-700 px-3 py-1 rounded-xl">
+              Connect Wallet
+            </button>
+          </div>
+
+          <div className="flex justify-between p-4 bg-gray-800 rounded-xl">
+            <div className="flex items-center space-x-4">
+              <img src="/path-to-okx-logo" alt="OKX" className="w-6 h-6" />
+              <p className="max-[500px]:text-sm">OKX exchange</p>
+            </div>
+            <button className="text-green-500 bg-gray-700 px-3 py-1 rounded-xl">
+              Connect Wallet
+            </button>
+          </div>
+
+          <div className="flex justify-between p-4 bg-gray-800 rounded-xl">
+            <div className="flex items-center space-x-4">
+              <img src="/path-to-bybit-logo" alt="Bybit" className="w-6 h-6" />
+              <p className="max-[500px]:text-sm">Bybit exchange</p>
+            </div>
+            <button className="text-green-500 bg-gray-700 px-3 py-1 rounded-xl">
+              Connect Wallet
+            </button>
+          </div>
+
+          <div className="flex justify-between p-4 bg-gray-800 rounded-xl">
+            <div className="flex items-center space-x-4">
+              <img
+                src="/path-to-wallet-telegram-logo"
+                alt="Wallet in Telegram"
+                className="w-6 h-6"
+              />
+              <p className="max-[500px]:text-sm">Wallet in Telegram</p>
+            </div>
+            <button className="text-green-500 bg-gray-700 px-3 py-1 rounded-xl">
+              Connect Wallet
+            </button>
+          </div>
+
+          <div className="flex justify-between p-4 bg-gray-800 rounded-xl">
+            <div className="flex items-center space-x-4">
+              <img src="/path-to-ebi-logo" alt="EBI" className="w-6 h-6" />
+              <p className="max-[500px]:text-sm">EBI exchange</p>
+            </div>
+            <button className="text-green-500 bg-gray-700 px-3 py-1 rounded-xl">
+              Connect Wallet
+            </button>
+          </div>
+
+          <div className="flex justify-between p-4 bg-gray-800 rounded-xl">
+            <div className="flex items-center space-x-4">
+              <img
+                src="/path-to-onchain-logo"
+                alt="On-chain"
+                className="w-6 h-6"
+              />
+              <p className="max-[500px]:text-sm">On-chain airdrop</p>
+            </div>
+            <button className="text-green-500 bg-gray-700 px-3 py-1 rounded-xl">
+              Connect Wallet
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Reset Withdrawal */}
+      <div className="flex justify-center items-center mt-8 text-center w-full">
+        <button className=" text-white p-3 rounded-xl border border-gray-200 w-fit">
+          Reset withdrawal options
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default AirdropPage;
