@@ -3,7 +3,7 @@ import RoadmapCard from "./RoadmapCard";
 import "../App.css"; 
 import Footer from "./Footer";
 import image from "../12.png";
-import image2 from "../14.png";
+import image2 from "../CONNECT_20240920_191434_0000.png";
 import { useNavigate } from "react-router-dom";
 
 function HomePage() {
@@ -19,7 +19,7 @@ function HomePage() {
     <div className="bg-[#13111c] text-white min-h-screen">
       <Navbar />
       <section className="text-center py-2 px-4 flex flex-col items-center">
-        <h1 className="text-[80px] font-bold mb-4 max-[800px]:text-[48px] max-[800px]:mt-[115px] max-[900px]:leading-tight">
+        <h1 className="text-[80px] font-bold mb-4 max-[800px]:text-[48px] max-[800px]:mt-[155px] max-[900px]:leading-tight">
           Unleash your inner CEO
         </h1>
         <img src={image} alt="image" />

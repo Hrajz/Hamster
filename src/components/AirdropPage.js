@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import image from "../11.png"; // Replace this with your actual image
+import { PiMedalFill } from "react-icons/pi";
 
 const AirdropPage = () => {
+  const [activeTab, setActiveTab] = useState("withdrawal");
   const navigate = useNavigate();
-  const listingDate = new Date("2024-10-26T00:00:00Z"); // Listing Date
+  const listingDate = new Date("2024-09-26T00:00:00Z"); // Listing Date
 
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
@@ -90,17 +92,34 @@ const AirdropPage = () => {
         <p className="text-2xl font-semibold text-yellow-400">
           {formattedListingDate}
         </p>
-        <div className="bg-green-500 text-center rounded-md mt-4 p-2">
+        <div className="bg-green-500 text-center rounded-md mt-4 p-2 flex flex-col items-center">
           <p className="text-white">AirDrop allocation points</p>
-          <p className="text-xl font-bold">TBA</p>
+          <p className="text-xl font-bold flex items-center">
+            <PiMedalFill className="size-[22px] mr-1" />
+            TBA
+          </p>
         </div>
       </div>
 
       {/* Points and Withdrawal */}
       <div className="mt-6">
         <div className="flex justify-between p-2 bg-gray-700 rounded-md text-gray-400">
-          <p>Points</p>
-          <p>Withdrawal</p>
+          <p
+            className={`cursor-pointer p-2 rounded-md w-[48%] flex justify-start ${
+              activeTab === "points" ? "bg-gray-600 text-white" : ""
+            }`}
+            onClick={() => setActiveTab("points")}
+          >
+            Points
+          </p>
+          <p
+            className={`cursor-pointer p-2 rounded-md w-[48%] flex justify-end ${
+              activeTab === "withdrawal" ? "bg-gray-600 text-white" : ""
+            }`}
+            onClick={() => setActiveTab("withdrawal")}
+          >
+            Withdrawal
+          </p>
         </div>
 
         {/* Exchanges */}
