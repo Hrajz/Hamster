@@ -1,6 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import image from "../11.png"; // Replace this with your actual image
+import image from "../11.png"; 
+import image1 from "../binan.jpg"; 
+import image2 from "../okx.jpg"; 
+import image3 from "../by.jpg"; 
+import image4 from "../tele.jpg"; 
+import image5 from "../ebi.jpg"; 
+import image6 from "../air.jpg"; 
 import { PiMedalFill } from "react-icons/pi";
 
 const AirdropPage = () => {
@@ -127,11 +133,7 @@ const AirdropPage = () => {
           {/* Exchange Items */}
           <div className="flex justify-between p-4 bg-gray-800 rounded-xl">
             <div className="flex items-center space-x-4">
-              <img
-                src="/path-to-binance-logo"
-                alt="Binance"
-                className="w-6 h-6"
-              />
+              <img src={image1} alt="Binance" className="w-10 h-10" />
               <p className="max-[500px]:text-sm">Binance exchange</p>
             </div>
             <button className="text-green-500 bg-gray-700 px-3 py-1 rounded-xl">
@@ -141,7 +143,7 @@ const AirdropPage = () => {
 
           <div className="flex justify-between p-4 bg-gray-800 rounded-xl">
             <div className="flex items-center space-x-4">
-              <img src="/path-to-okx-logo" alt="OKX" className="w-6 h-6" />
+              <img src={image2} alt="OKX" className="w-10 h-10" />
               <p className="max-[500px]:text-sm">OKX exchange</p>
             </div>
             <button className="text-green-500 bg-gray-700 px-3 py-1 rounded-xl">
@@ -151,7 +153,7 @@ const AirdropPage = () => {
 
           <div className="flex justify-between p-4 bg-gray-800 rounded-xl">
             <div className="flex items-center space-x-4">
-              <img src="/path-to-bybit-logo" alt="Bybit" className="w-6 h-6" />
+              <img src={image3} alt="Bybit" className="w-10 h-10" />
               <p className="max-[500px]:text-sm">Bybit exchange</p>
             </div>
             <button className="text-green-500 bg-gray-700 px-3 py-1 rounded-xl">
@@ -162,9 +164,9 @@ const AirdropPage = () => {
           <div className="flex justify-between p-4 bg-gray-800 rounded-xl">
             <div className="flex items-center space-x-4">
               <img
-                src="/path-to-wallet-telegram-logo"
+                src={image4}
                 alt="Wallet in Telegram"
-                className="w-6 h-6"
+                className="w-10 h-10"
               />
               <p className="max-[500px]:text-sm">Wallet in Telegram</p>
             </div>
@@ -175,7 +177,7 @@ const AirdropPage = () => {
 
           <div className="flex justify-between p-4 bg-gray-800 rounded-xl">
             <div className="flex items-center space-x-4">
-              <img src="/path-to-ebi-logo" alt="EBI" className="w-6 h-6" />
+              <img src={image5} alt="EBI" className="w-10 h-10" />
               <p className="max-[500px]:text-sm">EBI exchange</p>
             </div>
             <button className="text-green-500 bg-gray-700 px-3 py-1 rounded-xl">
@@ -185,11 +187,7 @@ const AirdropPage = () => {
 
           <div className="flex justify-between p-4 bg-gray-800 rounded-xl">
             <div className="flex items-center space-x-4">
-              <img
-                src="/path-to-onchain-logo"
-                alt="On-chain"
-                className="w-6 h-6"
-              />
+              <img src={image6} alt="On-chain" className="w-10 h-10" />
               <p className="max-[500px]:text-sm">On-chain airdrop</p>
             </div>
             <button className="text-green-500 bg-gray-700 px-3 py-1 rounded-xl">
