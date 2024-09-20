@@ -136,7 +136,7 @@ const AirdropPage = () => {
               <img src={image1} alt="Binance" className="w-10 h-10" />
               <p className="max-[500px]:text-sm">Binance exchange</p>
             </div>
-            <button className="text-green-500 bg-gray-700 px-3 py-1 rounded-xl">
+            <button className="text-white bg-green-500 px-3 py-1 rounded-xl focus:bg-green-700">
               Connect Wallet
             </button>
           </div>
@@ -146,7 +146,7 @@ const AirdropPage = () => {
               <img src={image2} alt="OKX" className="w-10 h-10" />
               <p className="max-[500px]:text-sm">OKX exchange</p>
             </div>
-            <button className="text-green-500 bg-gray-700 px-3 py-1 rounded-xl">
+            <button className="text-white bg-green-500 px-3 py-1 rounded-xl focus:bg-green-700">
               Connect Wallet
             </button>
           </div>
@@ -156,7 +156,7 @@ const AirdropPage = () => {
               <img src={image3} alt="Bybit" className="w-10 h-10" />
               <p className="max-[500px]:text-sm">Bybit exchange</p>
             </div>
-            <button className="text-green-500 bg-gray-700 px-3 py-1 rounded-xl">
+            <button className="text-white bg-green-500 px-3 py-1 rounded-xl focus:bg-green-700">
               Connect Wallet
             </button>
           </div>
@@ -170,7 +170,7 @@ const AirdropPage = () => {
               />
               <p className="max-[500px]:text-sm">Wallet in Telegram</p>
             </div>
-            <button className="text-green-500 bg-gray-700 px-3 py-1 rounded-xl">
+            <button className="text-white bg-green-500 px-3 py-1 rounded-xl focus:bg-green-700">
               Connect Wallet
             </button>
           </div>
@@ -180,7 +180,7 @@ const AirdropPage = () => {
               <img src={image5} alt="EBI" className="w-10 h-10" />
               <p className="max-[500px]:text-sm">EBI exchange</p>
             </div>
-            <button className="text-green-500 bg-gray-700 px-3 py-1 rounded-xl">
+            <button className="text-white bg-green-500 px-3 py-1 rounded-xl focus:bg-green-700">
               Connect Wallet
             </button>
           </div>
@@ -190,7 +190,7 @@ const AirdropPage = () => {
               <img src={image6} alt="On-chain" className="w-10 h-10" />
               <p className="max-[500px]:text-sm">On-chain airdrop</p>
             </div>
-            <button className="text-green-500 bg-gray-700 px-3 py-1 rounded-xl">
+            <button className="text-white bg-green-500 px-3 py-1 rounded-xl focus:bg-green-700">
               Connect Wallet
             </button>
           </div>
