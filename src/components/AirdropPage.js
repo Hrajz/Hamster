@@ -131,7 +131,7 @@ const AirdropPage = () => {
         {/* Exchanges */}
         <div className="mt-4 space-y-2">
           {/* Exchange Items */}
-          <div className="flex justify-between p-4 bg-gray-800 rounded-xl">
+          <div className="flex justify-between p-2 bg-gray-800 rounded-xl">
             <div className="flex items-center space-x-4">
               <img src={image1} alt="Binance" className="w-10 h-10" />
               <p className="max-[500px]:text-sm">Binance exchange</p>
@@ -141,7 +141,7 @@ const AirdropPage = () => {
             </button>
           </div>
 
-          <div className="flex justify-between p-4 bg-gray-800 rounded-xl">
+          <div className="flex justify-between p-2 bg-gray-800 rounded-xl">
             <div className="flex items-center space-x-4">
               <img src={image2} alt="OKX" className="w-10 h-10" />
               <p className="max-[500px]:text-sm">OKX exchange</p>
@@ -151,7 +151,7 @@ const AirdropPage = () => {
             </button>
           </div>
 
-          <div className="flex justify-between p-4 bg-gray-800 rounded-xl">
+          <div className="flex justify-between p-2 bg-gray-800 rounded-xl">
             <div className="flex items-center space-x-4">
               <img src={image3} alt="Bybit" className="w-10 h-10" />
               <p className="max-[500px]:text-sm">Bybit exchange</p>
@@ -161,7 +161,7 @@ const AirdropPage = () => {
             </button>
           </div>
 
-          <div className="flex justify-between p-4 bg-gray-800 rounded-xl">
+          <div className="flex justify-between p-2 bg-gray-800 rounded-xl">
             <div className="flex items-center space-x-4">
               <img
                 src={image4}
@@ -175,7 +175,7 @@ const AirdropPage = () => {
             </button>
           </div>
 
-          <div className="flex justify-between p-4 bg-gray-800 rounded-xl">
+          <div className="flex justify-between p-2 bg-gray-800 rounded-xl">
             <div className="flex items-center space-x-4">
               <img src={image5} alt="EBI" className="w-10 h-10" />
               <p className="max-[500px]:text-sm">EBI exchange</p>
@@ -185,7 +185,7 @@ const AirdropPage = () => {
             </button>
           </div>
 
-          <div className="flex justify-between p-4 bg-gray-800 rounded-xl">
+          <div className="flex justify-between p-2 bg-gray-800 rounded-xl">
             <div className="flex items-center space-x-4">
               <img src={image6} alt="On-chain" className="w-10 h-10" />
               <p className="max-[500px]:text-sm">On-chain airdrop</p>
