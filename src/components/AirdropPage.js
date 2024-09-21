@@ -9,6 +9,7 @@ import image5 from "../ebi.jpg";
 import image6 from "../air.jpg";
 import bg from "../bg.jpg";
 import { PiMedalFill } from "react-icons/pi";
+import { MdVerified } from "react-icons/md";
 
 const AirdropPage = () => {
   const [activeTab, setActiveTab] = useState("withdrawal");
@@ -71,7 +72,7 @@ const AirdropPage = () => {
             &#8592;
           </button>
           <h1 className="text-xl font-semibold">Hamster Kombat</h1>
-          <span className="text-blue-500 text-sm ml-2">&#10003;</span>
+          <MdVerified className="text-blue-500 text-sm ml-2 mt-1"/>
         </div>
       </div>
 
