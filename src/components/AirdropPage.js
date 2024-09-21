@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import image from "../11.png"; 
-import image1 from "../binan.jpg"; 
-import image2 from "../okx.jpg"; 
-import image3 from "../by.jpg"; 
-import image4 from "../tele.jpg"; 
-import image5 from "../ebi.jpg"; 
-import image6 from "../air.jpg"; 
+import image from "../11.png";
+import image1 from "../binan.jpg";
+import image2 from "../okx.jpg";
+import image3 from "../by.jpg";
+import image4 from "../tele.jpg";
+import image5 from "../ebi.jpg";
+import image6 from "../air.jpg";
+import bg from "../bg.jpg";
 import { PiMedalFill } from "react-icons/pi";
 
 const AirdropPage = () => {
@@ -107,7 +108,7 @@ const AirdropPage = () => {
         </div>
       </div>
 
-      {/* Points and Withdrawal */}
+      {/* Points and Withdrawal Tabs */}
       <div className="mt-6">
         <div className="flex justify-between p-2 bg-gray-700 rounded-md text-gray-400">
           <p
@@ -116,7 +117,7 @@ const AirdropPage = () => {
             }`}
             onClick={() => setActiveTab("points")}
           >
-            Points
+            Tokens
           </p>
           <p
             className={`cursor-pointer p-2 rounded-md w-[48%] flex justify-end ${
@@ -128,80 +129,81 @@ const AirdropPage = () => {
           </p>
         </div>
 
-        {/* Exchanges */}
-        <div className="mt-4 space-y-2">
-          {/* Exchange Items */}
-          <div className="flex justify-between p-2 bg-gray-800 rounded-xl">
-            <div className="flex items-center space-x-4">
-              <img src={image1} alt="Binance" className="w-10 h-10" />
-              <p className="max-[500px]:text-sm">Binance exchange</p>
+        {/* Content based on active tab */}
+        <div className="mt-4">
+          {activeTab === "points" ? (
+            <div className="flex justify-center">
+              <img src={bg} alt="Points Image" className="w-180 h-180" />
             </div>
-            <button className="text-white bg-green-500 px-3 py-1 rounded-xl focus:bg-green-700">
-              Connect Wallet
-            </button>
-          </div>
+          ) : (
+            <div className="space-y-2">
+              {/* Exchanges for withdrawal */}
+              <div className="flex justify-between p-2 bg-gray-800 rounded-xl">
+                <div className="flex items-center space-x-4">
+                  <img src={image1} alt="Binance" className="w-10 h-10" />
+                  <p className="max-[500px]:text-sm">Binance exchange</p>
+                </div>
+                <button className="text-white bg-green-500 px-3 py-1 rounded-xl focus:bg-green-700">
+                  Connect Wallet
+                </button>
+              </div>
 
-          <div className="flex justify-between p-2 bg-gray-800 rounded-xl">
-            <div className="flex items-center space-x-4">
-              <img src={image2} alt="OKX" className="w-10 h-10" />
-              <p className="max-[500px]:text-sm">OKX exchange</p>
-            </div>
-            <button className="text-white bg-green-500 px-3 py-1 rounded-xl focus:bg-green-700">
-              Connect Wallet
-            </button>
-          </div>
+              <div className="flex justify-between p-2 bg-gray-800 rounded-xl">
+                <div className="flex items-center space-x-4">
+                  <img src={image2} alt="OKX" className="w-10 h-10" />
+                  <p className="max-[500px]:text-sm">OKX exchange</p>
+                </div>
+                <button className="text-white bg-green-500 px-3 py-1 rounded-xl focus:bg-green-700">
+                  Connect Wallet
+                </button>
+              </div>
 
-          <div className="flex justify-between p-2 bg-gray-800 rounded-xl">
-            <div className="flex items-center space-x-4">
-              <img src={image3} alt="Bybit" className="w-10 h-10" />
-              <p className="max-[500px]:text-sm">Bybit exchange</p>
-            </div>
-            <button className="text-white bg-green-500 px-3 py-1 rounded-xl focus:bg-green-700">
-              Connect Wallet
-            </button>
-          </div>
+              <div className="flex justify-between p-2 bg-gray-800 rounded-xl">
+                <div className="flex items-center space-x-4">
+                  <img src={image3} alt="Bybit" className="w-10 h-10" />
+                  <p className="max-[500px]:text-sm">Bybit exchange</p>
+                </div>
+                <button className="text-white bg-green-500 px-3 py-1 rounded-xl focus:bg-green-700">
+                  Connect Wallet
+                </button>
+              </div>
 
-          <div className="flex justify-between p-2 bg-gray-800 rounded-xl">
-            <div className="flex items-center space-x-4">
-              <img
-                src={image4}
-                alt="Wallet in Telegram"
-                className="w-10 h-10"
-              />
-              <p className="max-[500px]:text-sm">Wallet in Telegram</p>
-            </div>
-            <button className="text-white bg-green-500 px-3 py-1 rounded-xl focus:bg-green-700">
-              Connect Wallet
-            </button>
-          </div>
+              <div className="flex justify-between p-2 bg-gray-800 rounded-xl">
+                <div className="flex items-center space-x-4">
+                  <img
+                    src={image4}
+                    alt="Wallet in Telegram"
+                    className="w-10 h-10"
+                  />
+                  <p className="max-[500px]:text-sm">Wallet in Telegram</p>
+                </div>
+                <button className="text-white bg-green-500 px-3 py-1 rounded-xl focus:bg-green-700">
+                  Connect Wallet
+                </button>
+              </div>
 
-          <div className="flex justify-between p-2 bg-gray-800 rounded-xl">
-            <div className="flex items-center space-x-4">
-              <img src={image5} alt="EBI" className="w-10 h-10" />
-              <p className="max-[500px]:text-sm">EBI exchange</p>
-            </div>
-            <button className="text-white bg-green-500 px-3 py-1 rounded-xl focus:bg-green-700">
-              Connect Wallet
-            </button>
-          </div>
+              <div className="flex justify-between p-2 bg-gray-800 rounded-xl">
+                <div className="flex items-center space-x-4">
+                  <img src={image5} alt="EBI" className="w-10 h-10" />
+                  <p className="max-[500px]:text-sm">EBI exchange</p>
+                </div>
+                <button className="text-white bg-green-500 px-3 py-1 rounded-xl focus:bg-green-700">
+                  Connect Wallet
+                </button>
+              </div>
 
-          <div className="flex justify-between p-2 bg-gray-800 rounded-xl">
-            <div className="flex items-center space-x-4">
-              <img src={image6} alt="On-chain" className="w-10 h-10" />
-              <p className="max-[500px]:text-sm">On-chain airdrop</p>
+              <div className="flex justify-between p-2 bg-gray-800 rounded-xl">
+                <div className="flex items-center space-x-4">
+                  <img src={image6} alt="On-chain" className="w-10 h-10" />
+                  <p className="max-[500px]:text-sm">On-chain airdrop</p>
+                </div>
+                <button className="text-white bg-green-500 px-3 py-1 rounded-xl focus:bg-green-700">
+                  Connect Wallet
+                </button>
+              </div>
             </div>
-            <button className="text-white bg-green-500 px-3 py-1 rounded-xl focus:bg-green-700">
-              Connect Wallet
-            </button>
-          </div>
+          )}
         </div>
-      </div>
-
-      {/* Reset Withdrawal */}
-      <div className="flex justify-center items-center mt-8 text-center w-full">
-        <button className=" text-white p-3 rounded-xl border border-gray-200 w-fit">
-          Reset withdrawal options
-        </button>
       </div>
     </div>
   );

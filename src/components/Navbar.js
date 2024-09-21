@@ -19,11 +19,17 @@ const Navbar = () => {
         </div>
       </nav>
       <div className="absolute top-[50px] left-[20px] flex justify-center rounded-full border border-gray-800 w-fit py-2 mb-6 items-center max-[900px]:top-[102px] max-[900px]:py-0 max-[900px]:pl-4">
-        <a href="#" className="text-gray-400 hover:text-white">
+        <a
+          href="https://twitter.com/hamster_kombat"
+          className="text-gray-400 hover:text-white"
+        >
           <FaSquareXTwitter className="size-[45px] max-[800px]:size-[27px]" />
         </a>
 
-        <a href="#" className="text-gray-400 hover:text-white">
+        <a
+          href="https://t.me/hamster_kombat"
+          className="text-gray-400 hover:text-white"
+        >
           <FaTelegram className="size-[45px] max-[800px]:size-[27px]" />
         </a>
 
@@ -31,11 +37,13 @@ const Navbar = () => {
           Join us!
         </p>
       </div>
-      <img
-        src={image2}
-        alt=""
-        className="w-[15.5%] mb-6 absolute top-[50px] right-[20px] max-[900px]:w-[160px]  max-[900px]:top-[100px]"
-      />
+      <a href="https://hamsterkombatgame.io/docs/HK_WP_03.pdf">
+        <img
+          src={image2}
+          alt=""
+          className="w-[15.5%] mb-6 absolute top-[50px] right-[20px] max-[900px]:w-[160px]  max-[900px]:top-[100px]"
+        />
+      </a>
     </>
   );
 };
